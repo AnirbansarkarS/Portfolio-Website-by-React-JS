@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import Spline from '@splinetool/react-spline';
+
 
 const roles = ["Frontend Developer", "DSA Learner", "Research Lover","The ML Guy"];
 
@@ -28,6 +30,10 @@ function Hero() {
     <section className="flex flex-col items-center justify-center h-screen text-center 
       bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#0ea5e9] 
       animate-gradient-x">
+     
+
+      {/* <Spline scene="https://prod.spline.design/WUbRWdvT2DGf2eF1/scene.splinecode"/> */}
+
       
       {/* Profile Image */}
       <img
