@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import Spline from '@splinetool/react-spline';
+
 
 const roles = ["Frontend Developer", "DSA Learner", "Research Lover","The ML Guy"];
 
@@ -28,12 +30,16 @@ function Hero() {
     <section className="flex flex-col items-center justify-center h-screen text-center 
       bg-gradient-to-br from-[#0f172a] via-[#1e3a8a] to-[#0ea5e9] 
       animate-gradient-x">
+     
+
+      {/* <Spline scene="https://prod.spline.design/WUbRWdvT2DGf2eF1/scene.splinecode"/> */}
+
       
       {/* Profile Image */}
       <img
-        src="https://via.placeholder.com/200"
+        src="https://www.shutterstock.com/image-vector/portrait-cat-glasses-vector-art-600nw-2284410025.jpg"
         alt="profile"
-        className="w-40 h-40 rounded-full border-4 border-cyan-400 shadow-lg
+        className="w-70 h-70 rounded-full border-4 border-cyan-400 shadow-lg
         hover:scale-110 hover:shadow-cyan-500/50 transition-all duration-500"
       />
 
