@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { projects } from "../data/projects";
 
 function Projects() {
@@ -11,9 +12,27 @@ function Projects() {
           experiments. Each project pushes a different boundary.
         </p>
 
+        <div className="flex justify-center">
+          <a
+            href="https://github.com/AnirbansarkarS"
+            target="_blank"
+            rel="noreferrer"
+            className="primary-chip"
+          >
+            Explore GitHub Lab ↗
+          </a>
+        </div>
+
         <div className="project-grid mt-12">
           {projects.map((project, index) => (
-            <article key={project.title} className="project-card">
+            <motion.article
+              key={project.title}
+              className="project-card"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true, margin: "-80px" }}
+            >
               <div className="project-card__glow" aria-hidden />
               <div className="flex items-center justify-between mb-6">
                 <p className="text-xs uppercase tracking-[0.4em] text-gray-400">
@@ -47,7 +66,7 @@ function Projects() {
                   Visit Repo ↗
                 </a>
               </div>
-            </article>
+            </motion.article>
           ))}
         </div>
       </div>
