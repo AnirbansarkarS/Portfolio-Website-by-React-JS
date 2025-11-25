@@ -5,52 +5,64 @@ function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-md border-b border-cyan-500/20 shadow-[0_0_20px_#00fff7]">
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+    <nav className="nav-glass fixed top-0 left-0 w-full z-50">
+      <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
         {/* Logo */}
-        <motion.h1
+        <motion.a
+          href="#hero"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-cyan-400 text-2xl font-bold tracking-wider hover:drop-shadow-[0_0_8px_#00fff7] transition-all"
+          className="text-cyan-300 text-2xl font-semibold tracking-[0.3em] uppercase hover:text-white transition-colors"
         >
-          Anirban
-        </motion.h1>
+          ANIRBAN
+        </motion.a>
 
         {/* Hamburger Icon */}
-        <div
+        <button
           className="md:hidden flex flex-col gap-1 cursor-pointer"
           onClick={() => setOpen(!open)}
+          aria-label="Toggle navigation menu"
         >
-          <span className="w-6 h-0.5 bg-cyan-400"></span>
-          <span className="w-6 h-0.5 bg-cyan-400"></span>
-          <span className="w-6 h-0.5 bg-cyan-400"></span>
-        </div>
+          <span className="w-7 h-0.5 bg-cyan-300" />
+          <span className="w-7 h-0.5 bg-cyan-300" />
+          <span className="w-7 h-0.5 bg-cyan-300" />
+        </button>
 
         {/* Navigation Links */}
-        <ul
-          className={`md:flex gap-10 absolute md:static top-full right-0 bg-black/95 md:bg-transparent p-6 md:p-0 transition-all duration-500 ease-in-out ${
+        <div
+          className={`md:flex items-center gap-10 absolute md:static top-full right-0 bg-[#05060f]/95 md:bg-transparent px-8 py-6 md:p-0 transition-all duration-500 ease-in-out ${
             open
               ? "translate-x-0 opacity-100"
               : "translate-x-full opacity-0 md:opacity-100 md:translate-x-0"
           }`}
         >
-          {["Skills", "Projects", "Stats", "Contact"].map((item, i) => (
-            <li key={i}>
-              <a
-                href={`#${item.toLowerCase()}`}
-                className="relative text-white text-lg hover:text-cyan-400 transition-all duration-300
-                after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-cyan-400 after:left-0 after:-bottom-1 hover:after:w-full after:transition-all"
-              >
-                {item}
-              </a>
-            </li>
-          ))}
-        </ul>
+          <ul className="flex flex-col md:flex-row gap-6 md:gap-10">
+            {["Skills", "Projects", "Stats", "Contact"].map((item, i) => (
+              <li key={i}>
+                <a
+                  href={`#${item.toLowerCase()}`}
+                  className="nav-link"
+                  onClick={() => setOpen(false)}
+                >
+                  {item}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href="https://drive.google.com"
+            target="_blank"
+            rel="noreferrer"
+            className="primary-chip mt-6 md:mt-0"
+          >
+            Download Résumé
+          </a>
+        </div>
       </div>
     </nav>
   );
 }
 
 export default Navbar;
-

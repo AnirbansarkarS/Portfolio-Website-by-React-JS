@@ -10,15 +10,24 @@ import "./App.css";
 
 function App() {
   return (
-    <>
+    <div className="app-shell text-white">
+      <div className="grid-overlay" aria-hidden />
+      <div className="floating-blob blob-one" aria-hidden />
+      <div className="floating-blob blob-two" aria-hidden />
+      <div className="floating-blob blob-three" aria-hidden />
+
       <Navbar />
-      <Hero />
-      <Skills />
-      <Projects />
-      <Stats />
-      {/* <Contact />
-      <Footer /> */}
-    </>
+
+      <main className="content-wrapper">
+        <Hero />
+        <Skills />
+        <Projects />
+        <Stats />
+        <Contact />
+      </main>
+
+      <Footer />
+    </div>
   );
 }
 
