@@ -13,7 +13,7 @@ function Navbar() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-cyan-300 text-2xl font-semibold tracking-[0.3em] uppercase hover:text-white transition-colors"
+          className="text-cyan-300 text-2xl font-semibold tracking-[0.3em] uppercase hover:text-white transition-colors font-orbitron"
         >
           ANIRBAN
         </motion.a>
