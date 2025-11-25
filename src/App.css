@@ -223,6 +223,30 @@ body {
   gap: 1rem;
 }
 
+.skills-halo {
+  position: absolute;
+  width: 80vw;
+  height: 80vw;
+  max-width: 900px;
+  max-height: 900px;
+  border-radius: 50%;
+  top: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(15, 255, 255, 0.15), transparent 70%);
+  filter: blur(40px);
+  opacity: 0.8;
+}
+
+.skills-gridlines {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 160px 160px;
+  opacity: 0.35;
+}
+
 .skill-card {
   padding: 1.25rem 0.75rem;
   border-radius: 1rem;
