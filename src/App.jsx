@@ -37,7 +37,7 @@ function App() {
               transition={{ duration: 0.6 }}
             >
               <motion.h1
-                className="text-6xl font-orbitron font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400 mb-4"
+                className="text-6xl md:text-7xl lg:text-8xl font-orbitron font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400 mb-4"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -53,7 +53,7 @@ function App() {
                 {["█", "█", "█"].map((char, i) => (
                   <motion.span
                     key={i}
-                    className="text-cyan-400 text-2xl"
+                    className="text-cyan-400 text-2xl md:text-3xl"
                     animate={{
                       opacity: [0.3, 1, 0.3],
                     }}
@@ -68,7 +68,7 @@ function App() {
                 ))}
               </motion.div>
               <motion.p
-                className="text-cyan-300/70 font-orbitron text-sm mt-6 tracking-[0.3em] uppercase"
+                className="text-cyan-300/70 font-orbitron text-sm md:text-base mt-6 tracking-[0.3em] uppercase"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
