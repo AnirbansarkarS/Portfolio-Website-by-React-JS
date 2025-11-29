@@ -2,7 +2,7 @@ export const projects = [
     {
       title: "Digit Recognizer",
       description: "MNIST classification using CNN.",
-      link: "https://github.com/anirbanSarkars/digit-recognizer",
+      link: "https://github.com/AnirbansarkarS/DIGIT-RECOGNIZER---HOOKE",
     },
     {
       title: "GenZ to Millennial Chat Converter",
