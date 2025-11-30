@@ -19,7 +19,7 @@ function Projects() {
             rel="noreferrer"
             className="primary-chip"
           >
-            Explore GitHub Lab ↗
+            Explore GitHub ↗
           </a>
         </div>
 
