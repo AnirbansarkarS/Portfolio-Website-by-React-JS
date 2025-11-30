@@ -50,7 +50,7 @@ function Contact() {
             sanirban2006@gmail.com
           </a>
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/in/anirban-sarkar-259b44309/"
             target="_blank"
             rel="noreferrer"
             className="ghost-chip text-center"
