@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const roles = [
-  "Frontend Developer",
-  "DSA Learner",
+  "Problem Solver",
+  "Blockchain Enthusiast",
+  "Deep Learner",
   "Research Lover",
-  "The ML Explorer",
+  "The ML GUY",
 ];
 
 function Hero() {
